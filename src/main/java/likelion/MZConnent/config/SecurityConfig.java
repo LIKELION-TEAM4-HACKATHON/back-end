@@ -29,7 +29,7 @@ public class SecurityConfig {
     private final String[] permitAllUrl = {"/error",
             "/api/auth/login",
             "/api/auth/logout",
-            "/swagger", "/swagger-ui.html", "/swagger-ui/**", "/api-docs", "/api-docs/**", "/v3/api-docs/**", "/test" };
+            "/swagger", "/swagger-ui.html", "/swagger-ui/**", "/api-docs", "/api-docs/**", "/v3/api-docs/**", "/test", "/api/clubs" };
     private final String[] anonymousUrl = {
             "/api/auth/signup"
     };

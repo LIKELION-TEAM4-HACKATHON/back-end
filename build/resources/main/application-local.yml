@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mzconnect
+    username: root
+    password:
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password:
+
+jwt:
+  header: Authorization
+  secret: CGhpIGZhc2RmZCBuYW1lIGlzIGNoYXllb2l1bWcgZWFkZmEgYXNkZm5kIGltCGhpIG15IG5hYWRzZiBhZHNmZGZhc2QgZnNhZGZhc2QgbWUgaXMgY2hheWVvaXVtZyBlbmQgZHNhZmFkc2ZpbQoIaGlhIGFzZGFzZGZhc2RteSBuYWV3ZmFzZGZhZHNmYXNkZmFzZGZhc2RmYXNkZmFzZGZhc2RmYWZzZXdhcnFld3FyZXdxcmV3cWZhc2RkZmFzZGRhYWRzZm1lIGlzIGNoYXllb2l1bWcgZWFkZmEgYXNkZm5kIGltCGhpIG15IG5hYWRzZiBhZHNmZGZhc2QgZnNhZGZhc2QgbWUgaXMgY2hheWVvaXVtZyBlbmQgaW0KCGhkZmkgYW15IG5hbWUgaXMgY3NkYWZhc2RmaGF5ZW9pdW1nIGVhZGZhIGFzZGZuZCBpbQhoaSBteSBuYWFkc2YgYWRzZmRmYXNkIHNhZGZmc2FkZmFzZCBtZSBpcyBjaGF5ZW9pdW1nIGVuZCBpbQoIaGkgYXNkZmFzIGZteSBuYW1lIGlzIGNoYXllb2l1bWcgZWFkZmEgYXNkZm5kIGltCGhpIG15IG5hYWRzZiBhZHNmZGZhc2QgZnNhZGZhc2QgbWUgaWFzZGZzIGNoYXllb2l1bWcgZW5kIGltCgo==
+  access-token-validity-in-seconds: 7200 #2시간(7200)
+  refresh-token-validity-in-seconds: 1036800 #2주(1036800)
+
+logging:
+  level:
+    org.springframework.jdbc.datasource.DataSourceTransactionManager: DEBUG
+    org.springframework.jdbc.datasource.DriverManagerDataSource: DEBUG
+    org.springframework.boot.autoconfigure.orm.jpa: DEBUG
+    com.zaxxer.hikari: DEBUG
+    com.zaxxer.hikari.HikariConfig: DEBUG
+    com.zaxxer.hikari.HikariDataSource: DEBUG
