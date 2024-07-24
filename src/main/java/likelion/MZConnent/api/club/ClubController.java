@@ -38,7 +38,6 @@ public class ClubController {
         Member member = memberRepository.findByEmail(email).orElseThrow(() -> new IllegalArgumentException("존재하지 않는 사용자입니다."));
 
         CreateClubResponse response = clubService.createClub(request, member);
-
         return ResponseEntity.ok(response);
     }
 }
